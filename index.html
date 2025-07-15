@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pattanadol Portfolio</title>
+  <style>
+    :root {
+      --dark: #121212;
+      --gray: #1E1E1E;
+      --white: #fff;
+      --accent: #00FFC6;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--dark);
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    /* === Navbar === */
+    nav {
+      background-color: var(--gray);
+      padding: 15px 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    header,
+    section {
+      padding: 80px 20px 60px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      text-align: left;
+      background: linear-gradient(135deg, #1e1e1e, #121212);
+      padding: 100px 50px 60px;
+      margin-top: 60px;
+    }
+
+    .header-left {
+      max-width: 550px;
+    }
+
+    header h1 {
+      font-size: 52px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 20px;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: var(--accent);
+      color: var(--dark);
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 0 10px rgba(0, 255, 198, 0.4);
+    }
+
+    .cta-button:hover {
+      background-color: #00e0b4;
+      transform: translateY(-2px);
+    }
+
+    header img {
+      width: 240px;
+      height: 310px;
+      object-fit: cover;
+      border-radius: 12%;
+      border: 4px solid var(--accent);
+      box-shadow: 0 0 25px rgba(0, 255, 198, 0.4);
+    }
+
+    section h2 {
+      font-size: 32px;
+      border-left: 5px solid var(--accent);
+      padding-left: 15px;
+      margin-bottom: 20px;
+    }
+
+    .about,
+    .projects,
+    .contact,
+    .skills {
+      max-width: 900px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .about-content img {
+      width: 200px;
+      border-radius: 10px;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-item {
+      background-color: var(--gray);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .project-item:hover {
+      transform: scale(1.02);
+    }
+
+    .project-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .project-item div {
+      padding: 15px;
+    }
+
+    .project-item h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .skill-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .skill-cards .card {
+      background-color: var(--gray);
+      padding: 15px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .skill-cards .card:hover {
+      background-color: #2d2d2d;
+    }
+
+    .contact p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .header-left {
+        max-width: 100%;
+      }
+
+      header img {
+        margin-top: 30px;
+      }
+
+      header h1 {
+        font-size: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+
+  <header id="home">
+    <div class="header-left">
+      <h1>PATTANADOL</h1>
+      <p>Not the smartest, but I never stop trying.</p>
+      <a href="#projects" class="cta-button">View My Work</a>
+    </div>
+    <img src="p1.jpg" alt="Pattanadol1">
+  </header>
+
+
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="p2.jpg" alt="Pattanadol2">
+      <div class="about-text">
+        <p>ชื่อ: พัฒนดล นิโครธานนท์</p>
+        <p>อายุ: 22 ปี</p>
+        <p>คณะ: เทคโนโลยีสารสนเทศและนวัตกรรม</p>
+        <p>สาขา: วิทยาการคอมพิวเตอร์</p>
+        <p>มหาวิทยาลัย: มหาวิทยาลัยกรุงเทพ</p>
+        <p>งานอดิเรก': ออกแบบกราฟิก, แต่งเพลง, ทำบีทเพลง, ฝึกเขียนโปรแกรมที่ช่วยในงานดนตรี(ปรับคีย์คอร์ดเพลง) </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project-item">
+        <img src="project1.jpg" alt="Health Hub">
+        <div>
+          <h3>Health Hub</h3>
+         <p style="margin-bottom: 15px;"><strong>บทบาท:</strong> เป็นคนนำในการพัฒนาทั้ง Frontend และ Backend</p>
+        <p style="margin-bottom: 15px;"><strong>รายละเอียด:</strong> แอพสุขภาพที่มีฟังก์ชั่นหลากหลาย เช่น การแนะนำอาหารเพื่อสุขภาพโดยแยกเป็นหมวดหมู่, การคำนวนและเก็บผลค่าbim เพื่อนำไปใช้แนะนำอาหารที่เหมาะสม ฯลฯ </p>
+        <p style="margin-bottom: 15px;"><strong>สิ่งที่เรียนรู้:</strong> ฝึกการพึ่งพาตัวเองเพราะงานนี้เป็นงานแรกที่ผมเป็นคนดูแลทุกๆอย่างด้วยตัวเองและเป็นแกนนำในการทำโปรเจ็ค</p>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <img src="project2.jpg" alt="Alphabet sorting game (ASG)">
+        <div>
+          <h3>Alphabet sorting game (ASG)</h3>
+         <p style="margin-bottom: 15px;"><strong>บทบาท:</strong> งานชิ้นนี้ผมรับหน้าที่เป็นฝ่ายรับผิดชอบด้าน Coding เป็นหลัก โดยประสานงานกับทีมที่ดูแลเอกสาร</p>
+        <p style="margin-bottom: 15px;"><strong>รายละเอียด:</strong> แอพเกมตอบคำถามภาษาอังกฤษ เพื่อใช้พัฒนาทักษะภาษาอังกฤษให้กับเด็กๆได้ โดยมีโหมดแบ่งแยกเป็นประเภทต่างๆเช่น Noun, Pronoun, Verb เป็นต้น</p>
+        <p style="margin-bottom: 15px;"><strong>สิ่งที่เรียนรู้:</strong> ได้เรียนรู้การเขียนโปรแกรมด้วยตัวเอง เพราะนี่คือโปรเจ็คแรกๆที่พึ่งเริ่มหัด</p>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <img src="project3.jpg" alt="UI  for PTA. Project">
+        <div>
+          <h3>UI for PTA. Project</h3>
+            <p style="margin-bottom: 15px;"><strong>บทบาท:</strong> ออกแบบ UI โดยใช้ Figma</p>
+            <p style="margin-bottom: 15px;"><strong>รายละเอียด:</strong> โปรเจ็คนี้คือโปรเจ็คงานนอกที่อาจารย์มอบหมายให้ คือการออกแบบ UI ของเว็บไซต์การไฟฟ้าใหม่ทั้งหมดเพื่อนำไปใช้งานจริง </p>
+            <p style="margin-bottom: 15px;"><strong>สิ่งที่เรียนรู้:</strong> เข้าใจการใช้เครื่องมือต่างๆในฟิกมามากขึ้น เพราะแต่ก่อนผมทำงานออกแบบในCanva มาตลอด</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+  <h2>Skills</h2>
+
+  <h3 style="margin-top: 30px; color: var(--accent); font-size: 24px;">Technical Skills</h3>
+  <div class="skill-cards">
+    <div class="card"><strong>Frontend:</strong> HTML, CSS, JavaScript, Java</div>
+    <div class="card"><strong>Backend / Logic:</strong> C# (.NET), Python</div>
+    <div class="card"><strong>UX/UI Design:</strong> ออกแบบ UX ที่เข้าใจง่าย, ใช้ Figma, Canva</div>
+  </div>
+
+  <h3 style="margin-top: 40px; color: var(--accent); font-size: 24px;">Soft Skills</h3>
+  <div class="skill-cards">
+    <div class="card">Fast Learner – เรียนรู้เร็ว ใช้เอไอเสริมทักษะ</div>
+    <div class="card">Problem Solver – หาทางแก้แม้ยังไม่เก่งเทคนิค</div>
+    <div class="card">Open to Feedback – พร้อมรับและปรับปรุงจากคำแนะนำ</div>
+    <div class="card">Empathy – เข้าใจผู้ใช้และทำงานร่วมกับทีมได้ดี</div>
+    <div class="card">Growth Mindset – เชื่อว่าทุกอย่างเรียนรู้และพัฒนาได้</div>
+  </div>
+
+  <h3 style="margin-top: 40px; color: #ccc; font-size: 20px;">Other Tools & Skills</h3>
+  <ul style="margin-top: 10px; padding-left: 20px; line-height: 1.8;">
+    <li>ใช้ AI Tools เช่น ChatGPT, Notion AI ในการคิดและแก้ปัญหา</li>
+    <li>ใช้ Canva หารายได้จากการออกแบบกราฟฟิกต่างๆ เช่น โปสเตอร์คลินิก รูปในเพจข่าว</li>
+    <li>มีประสบการณ์ทำเพลง ตั้งแต่แต่งเพลง เล่นดนตรี ไปจนถึงควบคุมโปรดักชัน (อัดเสียง + ถ่าย MV)</li>
+    <li>ตัดต่อวิดีโอด้วย InShot และ iMovie (มีงานจ้างมาเรื่อยๆ)</li>
+    <li>เขียนคอนเทนต์หรือคิดไอเดียพรีเซนต์สำหรับโปรเจกต์ต่างๆ</li>
+  </ul>
+</section>
+
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <p>Facebook: Pattanadol Nikotanon</p>
+    <p>Line ID: 10840dong</p>
+    <p>IG: Dmajj.j</p>
+    <p>Email: Pattanadol.niko@bumail.net</p>
+    <p>Phone: 097-237-7531</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Pattanadol Nikotanon
+  </footer>
+
+</body>
+</html>
